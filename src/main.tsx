@@ -4,7 +4,14 @@ import { restaurants } from "./materials/mock";
 createRoot(document.getElementById("root")!).render(
   <div>
     {restaurants.map((restauran) => (
-      <div key={restauran.id}>
+      <div
+        key={restauran.id}
+        style={{
+          paddingLeft: "5px",
+          marginBottom: "5px",
+          border: "thin solid black",
+        }}
+      >
         <h1>{restauran.name}</h1>
         <h3>Меню</h3>
         <ul>
