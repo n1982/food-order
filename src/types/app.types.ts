@@ -1,6 +1,6 @@
-type RestaurantsId = string & { readonly brand: "RestaurantsId" };
-type MenuId = string & { readonly brand: "MenuId" };
-type ReviewId = string & { readonly brand: "ReviewId" };
+export type RestaurantId = string & { readonly brand: "RestaurantsId" };
+export type MenuId = string & { readonly brand: "MenuId" };
+export type ReviewId = string & { readonly brand: "ReviewId" };
 
 interface Menu {
   id: MenuId;
@@ -16,8 +16,8 @@ interface Review {
   rating: number;
 }
 
-export interface Restaurants {
-  id: RestaurantsId;
+export interface Restauran {
+  id: RestaurantId;
   name: string;
   menu: Menu[];
   reviews: Review[];
