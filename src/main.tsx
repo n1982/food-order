@@ -3,25 +3,25 @@ import { restaurants } from "./materials/mock";
 
 createRoot(document.getElementById("root")!).render(
   <div>
-    {restaurants.map((restauran) => (
+    {restaurants.map(({ id, name, menu, reviews }) => (
       <div
-        key={restauran.id}
+        key={id}
         style={{
           paddingLeft: "5px",
           marginBottom: "5px",
           border: "thin solid black",
         }}
       >
-        <h1>{restauran.name}</h1>
+        <h1>{name}</h1>
         <h3>Меню</h3>
         <ul>
-          {restauran.menu.map((menuItem) => (
+          {menu.map((menuItem) => (
             <li key={menuItem.id}>{menuItem.name}</li>
           ))}
         </ul>
         <h3>Отзывы</h3>
         <ul>
-          {restauran.reviews.map((reviewItem) => (
+          {reviews.map((reviewItem) => (
             <li key={reviewItem.id}>{reviewItem.text}</li>
           ))}
         </ul>
