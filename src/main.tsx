@@ -15,14 +15,14 @@ createRoot(document.getElementById("root")!).render(
         <h1>{name}</h1>
         <h3>Меню</h3>
         <ul>
-          {menu.map((menuItem) => (
-            <li key={menuItem.id}>{menuItem.name}</li>
+          {menu.map(({ id, name }) => (
+            <li key={id}>{name}</li>
           ))}
         </ul>
         <h3>Отзывы</h3>
         <ul>
-          {reviews.map((reviewItem) => (
-            <li key={reviewItem.id}>{reviewItem.text}</li>
+          {reviews.map(({ id, text }) => (
+            <li key={id}>{text}</li>
           ))}
         </ul>
       </div>
