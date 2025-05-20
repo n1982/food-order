@@ -2,5 +2,5 @@
 
 Используемый стек:
 
-- Node JS 
+- Node JS
 - React
