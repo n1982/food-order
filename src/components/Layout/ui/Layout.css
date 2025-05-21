@@ -6,7 +6,7 @@
 
 .layout-header {
   flex-shrink: 0;
-  background: #6200ee;
+  background: var(--color-primary);
   color: white;
   padding: 16px;
 }
@@ -18,7 +18,7 @@
 
 .layout-footer {
   flex-shrink: 0;
-  background: #333;
+  background: var(--color-primary);
   color: white;
   padding: 16px;
 }

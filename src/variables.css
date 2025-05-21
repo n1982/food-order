@@ -1,0 +1,21 @@
+:root {
+  /* Цвета */
+  --color-primary: #838282;
+  --color-secondary: #4c82f6;
+  --color-dark: #3502cd;
+  --color-light: #fff;
+  --color-text: #212121;
+
+  /* Размеры */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Тени */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  /* Радиусы */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

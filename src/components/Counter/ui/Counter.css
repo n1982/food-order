@@ -10,7 +10,7 @@
   height: 20px;
   border-radius: 50%;
   border: none;
-  background: #ff6b6b;
+  background: var(--color-secondary);
   color: white;
   font-size: 0.8rem;
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .counter-button:hover {
-  background: #ff5252;
+  background: var(--color-dark);
 }
 
 .counter-value {

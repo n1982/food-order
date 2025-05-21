@@ -14,13 +14,13 @@
 }
 
 .menu-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: #ff6b6b;
+  background-color: var(--color-secondary);
   border-radius: 3px;
 }
 
@@ -38,12 +38,12 @@
   .menu-container {
     padding: 0 12px;
   }
-  
+
   .menu-list {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  
+
   .menu-title {
     font-size: 1.3rem;
     margin-bottom: 16px;
