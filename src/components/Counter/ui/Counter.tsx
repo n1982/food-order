@@ -1,5 +1,5 @@
 import { useCount } from "../model/useCount";
-
+import "./Counter.css";
 const Counter = () => {
   const { count, onIncrement, onDecrement } = useCount();
   const handleDecrementClick = () => {
@@ -10,10 +10,14 @@ const Counter = () => {
     if (count < 5) onIncrement();
   };
   return (
-    <div>
-      <button onClick={handleDecrementClick}>-</button>
-      {count}
-      <button onClick={handleIncrementClick}>+</button>
+    <div className='counter'>
+      <button className='counter-button' onClick={handleDecrementClick}>
+        -
+      </button>
+      <span className='counter-value'>{count}</span>
+      <button className='counter-button' onClick={handleIncrementClick}>
+        +
+      </button>
     </div>
   );
 };

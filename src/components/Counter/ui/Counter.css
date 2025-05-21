@@ -1,0 +1,33 @@
+/* Counter Styles (базовые стили для счетчика) */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.counter-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.counter-button:hover {
+  background: #ff5252;
+}
+
+.counter-value {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
