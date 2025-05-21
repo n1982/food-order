@@ -5,6 +5,8 @@ import Restaurant from "../../Restaurant";
 import Toolbar from "../../Toolbar";
 import type { IRestaurant } from "../../../types/app.types";
 
+import "./App.css";
+
 const App = () => {
   const [currentRestaurant, setCurrentRestaurant] = useState<IRestaurant>(
     restaurants[0]
