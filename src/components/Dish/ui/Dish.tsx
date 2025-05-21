@@ -11,10 +11,10 @@ const Dish: FC<DishProps> = ({ name }) => {
     <>
       <li className='dish-item'>
         <span className='dish-name'>{name}</span>
+        <div className='dish-controls'>
+          <Counter />
+        </div>
       </li>
-      <div className='dish-controls'>
-        <Counter />
-      </div>
     </>
   );
 };
