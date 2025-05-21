@@ -6,8 +6,9 @@ import Toolbar from "../../Toolbar";
 import type { IRestaurant } from "../../../types/app.types";
 
 const App = () => {
-  const [currentRestaurant, setCurrentRestaurant] =
-    useState<IRestaurant | null>(null);
+  const [currentRestaurant, setCurrentRestaurant] = useState<IRestaurant>(
+    restaurants[0]
+  );
 
   return (
     <Layout>
@@ -17,7 +18,7 @@ const App = () => {
           setCurrentRestaurant={setCurrentRestaurant}
           currentRestaurantId={currentRestaurant?.id ?? null}
         />
-        {currentRestaurant && <Restaurant restaurant={currentRestaurant} />}
+        <Restaurant restaurant={currentRestaurant} />
       </>
     </Layout>
   );

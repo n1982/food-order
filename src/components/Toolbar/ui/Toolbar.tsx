@@ -4,7 +4,7 @@ import "./Toolbar.css";
 
 interface IToolbarProps {
   restaurants: IRestaurant[];
-  setCurrentRestaurant: Dispatch<SetStateAction<IRestaurant | null>>;
+  setCurrentRestaurant: Dispatch<SetStateAction<IRestaurant>>;
   currentRestaurantId: RestaurantId | null;
 }
 
