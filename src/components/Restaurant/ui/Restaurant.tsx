@@ -1,8 +1,25 @@
+import type { IRestaurant } from "../../../types/app.types";
+import Menu from "../../Menu";
+import ReviewList from "../../ReviewList";
+import "./Restaurant.css";
+
 interface RestaurantProps {
-  name: string;
+  restaurant: IRestaurant;
 }
-const Restaurant = ({ name }: RestaurantProps) => {
-  return <h1 key={"1"}>{name}</h1>;
+const Restaurant = ({
+  restaurant: { id, name, menu, reviews },
+}: RestaurantProps) => {
+  return (
+    <div className='restaurant-card'>
+      <h1 key={id} className='restaurant-name'>
+        {name}
+      </h1>
+      <div className='restaurant-content'>
+        <Menu menu={menu} />
+        <ReviewList reviews={reviews} />
+      </div>
+    </div>
+  );
 };
 
 export default Restaurant;
