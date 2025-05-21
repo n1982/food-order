@@ -1,0 +1,62 @@
+.restaurant-toolbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  overflow-x: auto;
+  padding: 0 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.restaurant-toolbar-scroll {
+  display: flex;
+  gap: 8px;
+  min-width: min-content;
+  height: 48px;
+}
+
+.restaurant-tab {
+  position: relative;
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.restaurant-tab:hover {
+  color: #333;
+}
+
+.restaurant-tab.active {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ff6b6b;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Для скролла (если нужно скрыть полосу прокрутки) */
+.restaurant-toolbar::-webkit-scrollbar {
+  display: none;
+}
+
+.restaurant-toolbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

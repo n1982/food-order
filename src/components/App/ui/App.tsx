@@ -1,30 +1,24 @@
+import { useState } from "react";
 import { restaurants } from "../../../materials/mock";
-import Dish from "../../Dish/";
 import Layout from "../../Layout";
-import Menu from "../../Menu";
 import Restaurant from "../../Restaurant";
-import ReviewList from "../../ReviewList";
+import Toolbar from "../../Toolbar";
+import type { IRestaurant } from "../../../types/app.types";
 
 const App = () => {
+  const [currentRestaurant, setCurrentRestaurant] =
+    useState<IRestaurant | null>(null);
+
   return (
     <Layout>
-      <div>
-        <div>toolbar</div>
-        {restaurants.map(({ id, name, menu, reviews }) => (
-          <div
-            key={id}
-            style={{
-              paddingLeft: "5px",
-              marginBottom: "5px",
-              border: "thin solid black",
-            }}
-          >
-            <Restaurant name={name} />
-            <Menu menu={menu} />
-            <ReviewList reviews={reviews} />
-          </div>
-        ))}
-      </div>
+      <>
+        <Toolbar
+          restaurants={restaurants}
+          setCurrentRestaurant={setCurrentRestaurant}
+          currentRestaurantId={currentRestaurant?.id ?? null}
+        />
+        {currentRestaurant && <Restaurant restaurant={currentRestaurant} />}
+      </>
     </Layout>
   );
 };
