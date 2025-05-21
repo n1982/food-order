@@ -1,4 +1,5 @@
 import { restaurants } from "../../../materials/mock";
+import Dish from "../../Dish/ui/Dish";
 import Layout from "../../Layout";
 import Restaurant from "../../Restaurant";
 
@@ -20,7 +21,7 @@ const App = () => {
             <h3>Меню</h3>
             <ul>
               {menu.map(({ id, name }) => (
-                <li key={id}>{name}</li>
+                <Dish key={id} name={name} />
               ))}
             </ul>
             <h3>Отзывы</h3>
