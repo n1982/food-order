@@ -1,5 +1,6 @@
 import { restaurants } from "../../../materials/mock";
 import Layout from "../../Layout";
+import Restaurant from "../../Restaurant";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
               border: "thin solid black",
             }}
           >
-            <h1>{name}</h1>
+            <Restaurant name={name} />
             <h3>Меню</h3>
             <ul>
               {menu.map(({ id, name }) => (
