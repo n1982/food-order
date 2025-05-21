@@ -1,8 +1,9 @@
 import { restaurants } from "../../../materials/mock";
 import Dish from "../../Dish/";
 import Layout from "../../Layout";
+import Menu from "../../Menu";
 import Restaurant from "../../Restaurant";
-import Review from "../../Review";
+import ReviewList from "../../ReviewList";
 
 const App = () => {
   return (
@@ -19,18 +20,8 @@ const App = () => {
             }}
           >
             <Restaurant name={name} />
-            <h3>Меню</h3>
-            <ul>
-              {menu.map(({ id, name }) => (
-                <Dish key={id} name={name} />
-              ))}
-            </ul>
-            <h3>Отзывы</h3>
-            <ul>
-              {reviews.map(({ id, text }) => (
-                <Review key={id} text={text} />
-              ))}
-            </ul>
+            <Menu menu={menu} />
+            <ReviewList reviews={reviews} />
           </div>
         ))}
       </div>
