@@ -8,9 +8,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
       <header>Header</header>
-
       {children}
-      <div>footer</div>
+      <footer>footer</footer>
     </div>
   );
 };
