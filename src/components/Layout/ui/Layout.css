@@ -1,0 +1,24 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.layout-header {
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 16px;
+}
+
+.layout-content {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+.layout-footer {
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 16px;
+}

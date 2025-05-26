@@ -1,11 +1,11 @@
 import type {
   MenuId,
-  Restauran,
+  IRestaurant,
   RestaurantId,
   ReviewId,
 } from "../types/app.types";
 
-export const restaurants: Restauran[] = [
+export const restaurants: IRestaurant[] = [
   {
     id: "a757a0e9-03c1-4a2a-b384-8ac21dbe2fb2" as RestaurantId,
     name: "Dishoom",

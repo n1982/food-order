@@ -1,0 +1,57 @@
+/* Основные стили меню */
+.menu-container {
+  margin: 24px 0;
+  padding: 0 16px;
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.menu-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-secondary);
+  border-radius: 3px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 0 12px;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .menu-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+    font-size: 1.2rem;
+  }
+}
