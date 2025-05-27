@@ -15,22 +15,26 @@ const DEFAULT_FORM_VALUE: IReviewForm = {
 type Action =
   | { type: "SET_NAME"; payload: string }
   | { type: "SET_TEXT"; payload: string }
-  | { type: "SET_RATING"; payload: number }
-  | { type: "CLEAR_FORM"; payload?: null };
+  | { type: "INCREMENT_RATING" }
+  | { type: "DECREMENT_RATING" }
+  | { type: "CLEAR_FORM" };
 
 const SET_NAME_ACTION: Action["type"] = "SET_NAME";
 const SET_TEXT_ACTION: Action["type"] = "SET_TEXT";
-const SET_RATING_ACTION: Action["type"] = "SET_RATING";
+const INCREMENT_RATING_ACTION: Action["type"] = "INCREMENT_RATING";
+const DECREMENT_RATING_ACTION: Action["type"] = "DECREMENT_RATING";
 const CLEAR_FORM_ACTION: Action["type"] = "CLEAR_FORM";
 
-const reducer = (state: IReviewForm, { type, payload }: Action) => {
-  switch (type) {
+const reducer = (state: IReviewForm, action: Action) => {
+  switch (action.type) {
     case SET_NAME_ACTION:
-      return { ...state, name: payload };
+      return { ...state, name: action.payload };
     case SET_TEXT_ACTION:
-      return { ...state, text: payload };
-    case SET_RATING_ACTION:
-      return { ...state, rating: payload };
+      return { ...state, text: action.payload };
+    case INCREMENT_RATING_ACTION:
+      return { ...state, rating: Math.min(state.rating + 1, 5) };
+    case DECREMENT_RATING_ACTION:
+      return { ...state, rating: Math.max(state.rating - 1, 1) };
     case CLEAR_FORM_ACTION:
       return DEFAULT_FORM_VALUE;
     default:
@@ -48,11 +52,15 @@ export const useForm = () => {
     dispatch({ type: SET_TEXT_ACTION, payload: text });
   };
 
-  const incrementRating = (rating: number) => {
-    dispatch({ type: SET_RATING_ACTION, payload: Math.min(rating, 5) });
+  const incrementRating = () => {
+    dispatch({
+      type: INCREMENT_RATING_ACTION,
+    });
   };
-  const decrementRating = (rating: number) => {
-    dispatch({ type: SET_RATING_ACTION, payload: Math.max(rating, 0) });
+  const decrementRating = () => {
+    dispatch({
+      type: DECREMENT_RATING_ACTION,
+    });
   };
   const clearForm = () => {
     dispatch({ type: CLEAR_FORM_ACTION });
