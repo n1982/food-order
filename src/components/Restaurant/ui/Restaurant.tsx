@@ -1,5 +1,6 @@
 import type { IRestaurant } from "../../../types/app.types";
 import Menu from "../../Menu";
+import { ReviewForm } from "../../ReviewForm";
 import ReviewList from "../../ReviewList";
 import "./Restaurant.css";
 
@@ -20,6 +21,9 @@ const Restaurant = ({
       <div className='restaurant-content'>
         {!!menu && <Menu menu={menu} />}
         {!!reviews && <ReviewList reviews={reviews} />}
+      </div>
+      <div className='review-content'>
+        <ReviewForm />
       </div>
     </div>
   );
