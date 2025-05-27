@@ -12,7 +12,7 @@ export const ReviewForm = () => {
   } = useForm();
 
   return (
-    <section>
+    <form>
       <div>
         <span>Имя</span>
         <input
@@ -38,6 +38,6 @@ export const ReviewForm = () => {
       <div>
         <button onClick={clearForm}>Очистить форму</button>
       </div>
-    </section>
+    </form>
   );
 };
