@@ -1,7 +1,12 @@
-import { useCount } from "../model/useCount";
 import "./Counter.css";
-const Counter = () => {
-  const { count, onIncrement, onDecrement } = useCount();
+
+interface ICounterProps {
+  count: number;
+  onIncrement: () => void;
+  onDecrement: () => void;
+}
+
+const Counter = ({ count, onIncrement, onDecrement }: ICounterProps) => {
   return (
     <div className='counter'>
       <button className='counter-button' onClick={onDecrement}>
