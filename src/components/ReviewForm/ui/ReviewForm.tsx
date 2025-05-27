@@ -12,26 +12,32 @@ export const ReviewForm = () => {
   } = useForm();
 
   return (
-    <div>
-      <div>Имя</div>
-      <input
-        type='text'
-        value={form.name}
-        onChange={(event) => setName(event.target.value)}
-      />
-      <div>Текст</div>
-      <input
-        type='text'
-        value={form.text}
-        onChange={(event) => setText(event.target.value)}
-      />
-      <div>Рейтинг</div>
+    <section>
+      <div>
+        <span>Имя</span>
+        <input
+          type='text'
+          value={form.name}
+          onChange={(event) => setName(event.target.value)}
+        />
+      </div>
+      <div>
+        <span>Текст</span>
+        <input
+          type='text'
+          value={form.text}
+          onChange={(event) => setText(event.target.value)}
+        />
+      </div>
+      <span>Рейтинг</span>
       <Counter
         count={form.rating}
         onIncrement={incrementRating}
         onDecrement={decrementRating}
       />
-      <button onClick={clearForm}>Очистить форму</button>
-    </div>
+      <div>
+        <button onClick={clearForm}>Очистить форму</button>
+      </div>
+    </section>
   );
 };
