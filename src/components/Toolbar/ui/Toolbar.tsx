@@ -1,6 +1,6 @@
 import type { Dispatch, FC, SetStateAction } from "react";
 import type { IRestaurant, RestaurantId } from "../../../types/app.types";
-import "./Toolbar.css";
+import styles from "./Toolbar.module.css";
 
 interface IToolbarProps {
   restaurants: IRestaurant[];
@@ -14,19 +14,19 @@ const Toolbar: FC<IToolbarProps> = ({
   currentRestaurantId,
 }) => {
   return (
-    <div className='restaurant-toolbar'>
-      <div className='restaurant-toolbar-scroll'>
+    <div className={styles.restaurant_toolbar}>
+      <div className={styles.restaurant_toolbar_scroll}>
         {restaurants.map((restaurant) => (
           <button
             key={restaurant.id}
-            className={`restaurant-tab ${
-              restaurant.id === currentRestaurantId ? "active" : ""
+            className={`${styles.restaurant_tab} ${
+              restaurant.id === currentRestaurantId ? `${styles.active}` : ""
             }`}
             onClick={() => setCurrentRestaurant(restaurant)}
           >
             {restaurant.name}
             {restaurant.id === currentRestaurantId && (
-              <div className='active-indicator' />
+              <div className={styles.active_indicator} />
             )}
           </button>
         ))}
