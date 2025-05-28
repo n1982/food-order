@@ -2,7 +2,7 @@ import type { IRestaurant } from "../../../types/app.types";
 import Menu from "../../Menu";
 import { ReviewForm } from "../../ReviewForm";
 import ReviewList from "../../ReviewList";
-import "./Restaurant.css";
+import styles from "./Restaurant.module.css";
 
 interface RestaurantProps {
   restaurant: IRestaurant;
@@ -14,15 +14,15 @@ const Restaurant = ({
     return null;
   }
   return (
-    <div className='restaurant-card'>
-      <h1 key={id} className='restaurant-name'>
+    <div className={styles.restaurant_card}>
+      <h1 key={id} className={styles.restaurant_name}>
         {name}
       </h1>
-      <div className='restaurant-content'>
+      <div className={styles.restaurant_content}>
         {!!menu && <Menu menu={menu} />}
         {!!reviews && <ReviewList reviews={reviews} />}
       </div>
-      <div className='review-content'>
+      <div>
         <ReviewForm />
       </div>
     </div>
