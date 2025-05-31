@@ -1,12 +1,12 @@
-import type { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
 import styles from "./Layout.module.css";
 
-interface LayoutProps {
+interface ILayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
     <div className={styles.layout}>
       <header className={styles.layout_header}>Header</header>
@@ -15,5 +15,3 @@ const Layout = ({ children }: LayoutProps) => {
     </div>
   );
 };
-
-export default Layout;

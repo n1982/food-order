@@ -1,15 +1,16 @@
+import type { FC } from "react";
 import type { IRestaurant } from "../../../types/app.types";
-import Menu from "../../Menu";
+import { Menu } from "../../Menu";
 import { ReviewForm } from "../../ReviewForm";
-import ReviewList from "../../ReviewList";
+import { ReviewList } from "../../ReviewList";
 import styles from "./Restaurant.module.css";
 
-interface RestaurantProps {
+interface IRestaurantProps {
   restaurant: IRestaurant;
 }
-const Restaurant = ({
+export const Restaurant: FC<IRestaurantProps> = ({
   restaurant: { id, name, menu, reviews },
-}: RestaurantProps) => {
+}) => {
   if (!name) {
     return null;
   }
@@ -28,5 +29,3 @@ const Restaurant = ({
     </div>
   );
 };
-
-export default Restaurant;

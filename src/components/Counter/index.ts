@@ -1,3 +1,1 @@
-import Counter from "./ui/Counter";
-
-export default Counter;
+export { Counter } from "./ui/Counter";

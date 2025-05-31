@@ -8,7 +8,7 @@ interface IToolbarProps {
   currentRestaurantId: RestaurantId | null;
 }
 
-const Toolbar: FC<IToolbarProps> = ({
+export const Toolbar: FC<IToolbarProps> = ({
   restaurants,
   setCurrentRestaurant,
   currentRestaurantId,
@@ -34,5 +34,3 @@ const Toolbar: FC<IToolbarProps> = ({
     </div>
   );
 };
-
-export default Toolbar;

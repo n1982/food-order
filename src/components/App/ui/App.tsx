@@ -1,6 +1,6 @@
-import Layout from "../../Layout";
-import { ProgressBar } from "../../ProgressBar/ui/ProgressBar";
-import Restaurants from "../../Restaurants";
+import { Layout } from "../../Layout";
+import { ProgressBar } from "../../ProgressBar";
+import { Restaurants } from "../../Restaurants";
 
 import "./App.css";
 

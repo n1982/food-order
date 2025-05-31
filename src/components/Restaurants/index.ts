@@ -1,3 +1,1 @@
-import Restaurants from "./ui/Restaurants";
-
-export default Restaurants;
+export { Restaurants } from "./ui/Restaurants";

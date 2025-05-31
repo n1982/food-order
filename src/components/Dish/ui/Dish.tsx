@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import Counter from "../../Counter";
+import { Counter } from "../../Counter";
 import { useCount } from "../../Counter/model/useCount";
 
 import "./Dish.css";
@@ -7,7 +7,7 @@ import "./Dish.css";
 interface DishProps {
   name: string;
 }
-const Dish: FC<DishProps> = ({ name }) => {
+export const Dish: FC<DishProps> = ({ name }) => {
   const { count, onDecrement, onIncrement } = useCount();
   return (
     <>
