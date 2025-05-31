@@ -1,19 +1,17 @@
-import type { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
-import "./Layout.css";
+import styles from "./Layout.module.css";
 
-interface LayoutProps {
+interface ILayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
-    <div className='layout'>
-      <header className='layout-header'>Header</header>
-      <main className='layout-content'>{children}</main>
-      <footer className='layout-footer'>footer</footer>
+    <div className={styles.layout}>
+      <header className={styles.layout_header}>Header</header>
+      <main className={styles.layout_content}>{children}</main>
+      <footer className={styles.layout_footer}>footer</footer>
     </div>
   );
 };
-
-export default Layout;

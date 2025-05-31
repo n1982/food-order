@@ -1,10 +1,10 @@
 import { useState } from "react";
 import type { IRestaurant } from "../../../types/app.types";
 import { restaurants } from "../../../materials/mock";
-import Toolbar from "../../Toolbar";
-import Restaurant from "../../Restaurant";
+import { Toolbar } from "../../Toolbar";
+import { Restaurant } from "../../Restaurant";
 
-const Restaurants = () => {
+export const Restaurants = () => {
   const [currentRestaurant, setCurrentRestaurant] = useState<IRestaurant>(
     restaurants[0]
   );
@@ -16,8 +16,7 @@ const Restaurants = () => {
         currentRestaurantId={currentRestaurant?.id ?? null}
       />
       <Restaurant restaurant={currentRestaurant} />
+      <Restaurant restaurant={currentRestaurant} />
     </>
   );
 };
-
-export default Restaurants;

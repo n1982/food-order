@@ -1,3 +1,1 @@
-import Review from "./ui/Review";
-
-export default Review;
+export { Review } from "./ui/Review";

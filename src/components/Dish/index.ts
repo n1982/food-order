@@ -1,3 +1,1 @@
-import Dish from "./ui/Dish";
-
-export default Dish;
+export { Dish } from "./ui/Dish";

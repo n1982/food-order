@@ -1,12 +1,12 @@
 import type { FC } from "react";
 import type { IReview } from "../../../types/app.types";
-import Review from "../../Review";
+import { Review } from "../../Review";
 
 interface IReviewListProps {
   reviews: IReview[];
 }
 
-const ReviewList: FC<IReviewListProps> = ({ reviews }) => {
+export const ReviewList: FC<IReviewListProps> = ({ reviews }) => {
   return (
     <>
       <h3>Отзывы</h3>
@@ -18,5 +18,3 @@ const ReviewList: FC<IReviewListProps> = ({ reviews }) => {
     </>
   );
 };
-
-export default ReviewList;

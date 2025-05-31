@@ -1,3 +1,1 @@
-import ReviewList from "./ui/ReviewList";
-
-export default ReviewList;
+export { ReviewList } from "./ui/ReviewList";
