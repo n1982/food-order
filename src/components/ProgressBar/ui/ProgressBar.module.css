@@ -1,0 +1,9 @@
+.progress_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  width: 0%;
+  z-index: 100;
+}

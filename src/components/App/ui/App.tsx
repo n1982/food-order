@@ -1,4 +1,5 @@
 import Layout from "../../Layout";
+import { ProgressBar } from "../../ProgressBar/ui/ProgressBar";
 import Restaurants from "../../Restaurants";
 
 import "./App.css";
@@ -6,6 +7,7 @@ import "./App.css";
 const App = () => {
   return (
     <Layout>
+      <ProgressBar />
       <Restaurants />
     </Layout>
   );
