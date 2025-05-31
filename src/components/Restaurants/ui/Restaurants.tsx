@@ -16,6 +16,7 @@ const Restaurants = () => {
         currentRestaurantId={currentRestaurant?.id ?? null}
       />
       <Restaurant restaurant={currentRestaurant} />
+      <Restaurant restaurant={currentRestaurant} />
     </>
   );
 };
