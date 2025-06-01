@@ -9,14 +9,14 @@ interface IRestaurantProps {
   restaurant: IRestaurant;
 }
 export const Restaurant: FC<IRestaurantProps> = ({
-  restaurant: { id, name, menu, reviews },
+  restaurant: { name, menu, reviews },
 }) => {
   if (!name) {
     return null;
   }
   return (
     <div className={styles.card}>
-      <h1 key={id} className={styles.name}>
+      <h1 className={styles.name}>
         {name}
       </h1>
       <div className={styles.content}>
