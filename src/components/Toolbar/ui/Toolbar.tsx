@@ -14,12 +14,12 @@ export const Toolbar: FC<IToolbarProps> = ({
   currentRestaurantId,
 }) => {
   return (
-    <div className={styles.restaurant_toolbar}>
-      <div className={styles.restaurant_toolbar_scroll}>
+    <div className={styles.toolbar}>
+      <div className={styles.toolbar_scroll}>
         {restaurants.map((restaurant) => (
           <button
             key={restaurant.id}
-            className={`${styles.restaurant_tab} ${
+            className={`${styles.tab} ${
               restaurant.id === currentRestaurantId ? `${styles.active}` : ""
             }`}
             onClick={() => setCurrentRestaurant(restaurant)}
