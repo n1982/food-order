@@ -9,9 +9,9 @@ interface ILayoutProps {
 export const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
     <div className={styles.layout}>
-      <header className={styles.layout_header}>Header</header>
-      <main className={styles.layout_content}>{children}</main>
-      <footer className={styles.layout_footer}>footer</footer>
+      <header className={styles.header}>Header</header>
+      <main className={styles.main}>{children}</main>
+      <footer className={styles.footer}>footer</footer>
     </div>
   );
 };
