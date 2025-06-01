@@ -15,11 +15,11 @@ export const Restaurant: FC<IRestaurantProps> = ({
     return null;
   }
   return (
-    <div className={styles.restaurant_card}>
-      <h1 key={id} className={styles.restaurant_name}>
+    <div className={styles.card}>
+      <h1 key={id} className={styles.name}>
         {name}
       </h1>
-      <div className={styles.restaurant_content}>
+      <div className={styles.content}>
         {!!menu && <Menu menu={menu} />}
         {!!reviews && <ReviewList reviews={reviews} />}
       </div>

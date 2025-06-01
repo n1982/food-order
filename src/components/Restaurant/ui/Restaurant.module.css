@@ -1,5 +1,4 @@
-/* Restaurant Card Styles */
-.restaurant_card {
+.card {
   width: fit-content;
   margin-top: 24px; /* Отступ под тулбар */
   padding: 20px;
@@ -9,7 +8,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.restaurant_name {
+.name {
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
@@ -17,6 +16,6 @@
   text-align: center;
 }
 
-.restaurant_content {
+.content {
   padding: 20px;
 }
