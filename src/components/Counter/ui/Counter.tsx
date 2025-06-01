@@ -14,11 +14,11 @@ export const Counter: FC<ICounterProps> = ({
 }) => {
   return (
     <div className={styles.counter}>
-      <button className={styles.counter_button} onClick={onDecrement}>
+      <button className={styles.button} onClick={onDecrement}>
         -
       </button>
-      <span className={styles.counter_value}>{count}</span>
-      <button className={styles.counter_button} onClick={onIncrement}>
+      <span className={styles.value}>{count}</span>
+      <button className={styles.button} onClick={onIncrement}>
         +
       </button>
     </div>

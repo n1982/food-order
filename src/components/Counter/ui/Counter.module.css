@@ -5,7 +5,7 @@
   gap: 8px;
 }
 
-.counter_button {
+.button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -19,11 +19,11 @@
   cursor: pointer;
 }
 
-.counter_button:hover {
+.button:hover {
   background: var(--color-dark);
 }
 
-.counter_value {
+.value {
   min-width: 20px;
   text-align: center;
   font-weight: 600;
