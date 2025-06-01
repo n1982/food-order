@@ -1,10 +1,10 @@
 /* Основные стили меню */
-.menu_container {
+.wrapper {
   margin: 24px 0;
   padding: 0 16px;
 }
 
-.menu_title {
+.title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
@@ -13,7 +13,7 @@
   padding-bottom: 8px;
 }
 
-.menu_title::after {
+.title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -24,7 +24,7 @@
   border-radius: 3px;
 }
 
-.menu_list {
+.list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -35,23 +35,23 @@
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .menu_container {
+  .wrapper {
     padding: 0 12px;
   }
 
-  .menu_list {
+  .list {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .menu_title {
+  .title {
     font-size: 1.3rem;
     margin-bottom: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .menu_title {
+  .title {
     font-size: 1.2rem;
   }
 }

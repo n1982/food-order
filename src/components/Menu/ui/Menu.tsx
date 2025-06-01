@@ -9,9 +9,9 @@ interface IMenuProps {
 }
 export const Menu: FC<IMenuProps> = ({ menu }) => {
   return (
-    <section className={styles.menu_container}>
-      <h3 className={styles.menu_title}>Меню</h3>
-      <ul className={styles.menu_list}>
+    <section className={styles.wrapper}>
+      <h3 className={styles.title}>Меню</h3>
+      <ul className={styles.list}>
         {menu.map(({ id, name }) => (
           <Dish key={id} name={name} />
         ))}
