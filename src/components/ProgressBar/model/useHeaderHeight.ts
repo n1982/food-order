@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import {type RefObject, useEffect, useState} from "react";
 
-export const useHeaderHeight = () => {
+export const useHeaderHeight = (elementRef: RefObject<HTMLDivElement | null>) => {
   const [height, setHeight] = useState(0);
+  const element = elementRef.current
 
   useEffect(() => {
-    const header = document.querySelector("header");
-    if (header) {
-      setHeight(header.offsetHeight);
-    }
-  }, []);
+
+    if (element) setHeight(element.offsetHeight);
+
+  }, [element]);
 
   return height;
 };
