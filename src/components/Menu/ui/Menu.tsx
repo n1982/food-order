@@ -13,7 +13,7 @@ export const Menu: FC<IMenuProps> = ({ menu }) => {
       <h3 className={styles.title}>Меню</h3>
       <ul className={styles.list}>
         {menu.map(({ id, name }) => (
-          <Dish key={id} name={name} />
+          <Dish key={id} dishName={name} />
         ))}
       </ul>
     </section>

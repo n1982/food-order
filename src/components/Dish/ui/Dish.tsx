@@ -3,23 +3,27 @@ import { Counter } from "../../Counter";
 import { useCount } from "../../Counter/model/useCount";
 
 import styles from "./Dish.module.css";
+import {useAuth} from "../../App/model/useAuth.ts";
 
 interface DishProps {
-  name: string;
+  dishName: string;
 }
-export const Dish: FC<DishProps> = ({ name }) => {
+export const Dish: FC<DishProps> = ({ dishName }) => {
   const { count, onDecrement, onIncrement } = useCount();
+  const {isUserLogin} = useAuth()
+
+
   return (
     <>
       <li className={styles.wrapper}>
-        <span className={styles.name}>{name}</span>
-        <div className={styles.quantity}>
+        <span className={styles.name}>{dishName}</span>
+        {isUserLogin && <div className={styles.quantity}>
           <Counter
-            count={count}
-            onDecrement={onDecrement}
-            onIncrement={onIncrement}
+              count={count}
+              onDecrement={onDecrement}
+              onIncrement={onIncrement}
           />
-        </div>
+        </div>}
       </li>
     </>
   );

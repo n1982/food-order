@@ -4,6 +4,7 @@ import { Menu } from "../../Menu";
 import { ReviewForm } from "../../ReviewForm";
 import { ReviewList } from "../../ReviewList";
 import styles from "./Restaurant.module.css";
+import {useAuth} from "../../App/model/useAuth.ts";
 
 interface IRestaurantProps {
   restaurant: IRestaurant;
@@ -11,6 +12,7 @@ interface IRestaurantProps {
 export const Restaurant: FC<IRestaurantProps> = ({
   restaurant: { name, menu, reviews },
 }) => {
+    const {isUserLogin} = useAuth()
   if (!name) {
     return null;
   }
@@ -24,7 +26,7 @@ export const Restaurant: FC<IRestaurantProps> = ({
         {!!reviews && <ReviewList reviews={reviews} />}
       </div>
       <div>
-        <ReviewForm />
+          {isUserLogin && <ReviewForm/>}
       </div>
     </div>
   );
