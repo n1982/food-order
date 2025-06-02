@@ -9,7 +9,7 @@ import {UserContext} from "../model/UserContext.ts";
 
 const App = () => {
     const [theme, setTheme] = useState<string>('light')
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState<string | null>(null)
 
     const toggleTheme = () => {
         setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
