@@ -4,12 +4,12 @@ import styles from "./ProgressBar.module.css";
 import {useHeaderHeight} from "../model/useHeaderHeight.ts";
 
 interface ProgressBar {
-    elementRef: RefObject<HTMLDivElement | null>
+    scrollRef: RefObject<HTMLDivElement | null>
 }
 
-export const ProgressBar:FC<ProgressBar> = ({elementRef}) => {
+export const ProgressBar:FC<ProgressBar> = ({scrollRef}) => {
     const progress = useProgress();
-    const positionTop = useHeaderHeight(elementRef)
+    const positionTop = useHeaderHeight(scrollRef)
     return (
         <div
             className={styles.progress_bar}
