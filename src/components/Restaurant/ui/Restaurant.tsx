@@ -1,32 +1,31 @@
+import type { FC } from "react";
 import type { IRestaurant } from "../../../types/app.types";
-import Menu from "../../Menu";
+import { Menu } from "../../Menu";
 import { ReviewForm } from "../../ReviewForm";
-import ReviewList from "../../ReviewList";
-import "./Restaurant.css";
+import { ReviewList } from "../../ReviewList";
+import styles from "./Restaurant.module.css";
 
-interface RestaurantProps {
+interface IRestaurantProps {
   restaurant: IRestaurant;
 }
-const Restaurant = ({
-  restaurant: { id, name, menu, reviews },
-}: RestaurantProps) => {
+export const Restaurant: FC<IRestaurantProps> = ({
+  restaurant: { name, menu, reviews },
+}) => {
   if (!name) {
     return null;
   }
   return (
-    <div className='restaurant-card'>
-      <h1 key={id} className='restaurant-name'>
+    <div className={styles.card}>
+      <h1 className={styles.name}>
         {name}
       </h1>
-      <div className='restaurant-content'>
+      <div className={styles.content}>
         {!!menu && <Menu menu={menu} />}
         {!!reviews && <ReviewList reviews={reviews} />}
       </div>
-      <div className='review-content'>
+      <div>
         <ReviewForm />
       </div>
     </div>
   );
 };
-
-export default Restaurant;

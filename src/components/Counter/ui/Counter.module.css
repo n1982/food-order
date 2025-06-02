@@ -1,11 +1,10 @@
-/* Counter Styles (базовые стили для счетчика) */
 .counter {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.counter-button {
+.button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -19,11 +18,11 @@
   cursor: pointer;
 }
 
-.counter-button:hover {
+.button:hover {
   background: var(--color-dark);
 }
 
-.counter-value {
+.value {
   min-width: 20px;
   text-align: center;
   font-weight: 600;

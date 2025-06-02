@@ -1,5 +1,5 @@
-import Layout from "../../Layout";
-import Restaurants from "../../Restaurants";
+import {Layout} from "../../Layout";
+import {Restaurants} from "../../Restaurants";
 
 import "./App.css";
 

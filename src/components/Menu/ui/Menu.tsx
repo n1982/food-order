@@ -1,17 +1,17 @@
 import type { FC } from "react";
 import type { IDish } from "../../../types/app.types";
-import Dish from "../../Dish";
+import { Dish } from "../../Dish";
 
-import "./Menu.css";
+import styles from "./Menu.module.css";
 
 interface IMenuProps {
   menu: IDish[];
 }
-const Menu: FC<IMenuProps> = ({ menu }) => {
+export const Menu: FC<IMenuProps> = ({ menu }) => {
   return (
-    <section className='menu-container'>
-      <h3 className='menu-title'>Меню</h3>
-      <ul className='menu-list'>
+    <section className={styles.wrapper}>
+      <h3 className={styles.title}>Меню</h3>
+      <ul className={styles.list}>
         {menu.map(({ id, name }) => (
           <Dish key={id} name={name} />
         ))}
@@ -19,4 +19,3 @@ const Menu: FC<IMenuProps> = ({ menu }) => {
     </section>
   );
 };
-export default Menu;

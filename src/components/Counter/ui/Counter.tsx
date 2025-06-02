@@ -1,4 +1,5 @@
-import "./Counter.css";
+import type { FC } from "react";
+import styles from "./Counter.module.css";
 
 interface ICounterProps {
   count: number;
@@ -6,17 +7,20 @@ interface ICounterProps {
   onDecrement: () => void;
 }
 
-const Counter = ({ count, onIncrement, onDecrement }: ICounterProps) => {
+export const Counter: FC<ICounterProps> = ({
+  count,
+  onIncrement,
+  onDecrement,
+}) => {
   return (
-    <div className='counter'>
-      <button className='counter-button' onClick={onDecrement}>
+    <div className={styles.counter}>
+      <button className={styles.button} onClick={onDecrement}>
         -
       </button>
-      <span className='counter-value'>{count}</span>
-      <button className='counter-button' onClick={onIncrement}>
+      <span className={styles.value}>{count}</span>
+      <button className={styles.button} onClick={onIncrement}>
         +
       </button>
     </div>
   );
 };
-export default Counter;

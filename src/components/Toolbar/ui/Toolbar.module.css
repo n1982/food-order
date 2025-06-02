@@ -1,4 +1,4 @@
-.restaurant-toolbar {
+.toolbar {
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #eaeaea;
@@ -7,14 +7,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.restaurant-toolbar-scroll {
+.toolbar_scroll {
   display: flex;
   gap: 8px;
   min-width: min-content;
   height: 48px;
 }
 
-.restaurant-tab {
+.tab {
   position: relative;
   padding: 0 16px;
   height: 100%;
@@ -32,16 +32,16 @@
   transition: all 0.2s ease;
 }
 
-.restaurant-tab:hover {
+.tab:hover {
   color: #333;
 }
 
-.restaurant-tab.active {
+.tab.active {
   color: var(--color-secondary);
   font-weight: 600;
 }
 
-.active-indicator {
+.active_indicator {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -52,11 +52,11 @@
 }
 
 /* Для скролла (если нужно скрыть полосу прокрутки) */
-.restaurant-toolbar::-webkit-scrollbar {
+.toolbar::-webkit-scrollbar {
   display: none;
 }
 
-.restaurant-toolbar {
+.toolbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
