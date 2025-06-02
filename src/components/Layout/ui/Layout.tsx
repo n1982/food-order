@@ -12,7 +12,7 @@ export const Layout: FC<ILayoutProps> = ({children}) => {
     return (
         <div className={styles.layout}>
             <header ref={headerRef} className={styles.header}>Header</header>
-            <ProgressBar elementRef={headerRef} />
+            <ProgressBar scrollRef={headerRef} />
             <main className={styles.main}>{children}</main>
             <footer className={styles.footer}>footer</footer>
         </div>
