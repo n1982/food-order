@@ -17,7 +17,7 @@ export const useProgress = () => {
       main.addEventListener("scroll", handleScroll);
     }
 
-    return ()=> main?.removeEventListener("scroll", handleScroll)
+    return () => main?.removeEventListener("scroll", handleScroll);
   }, []);
   return progress;
 };

@@ -1,28 +1,33 @@
-import type { FC } from "react";
+import { type FC, useContext } from "react";
 import { Counter } from "../../Counter";
 import { useCount } from "../../Counter/model/useCount";
-
+import { UserContext } from "../../App/model/UserContext.ts";
 import styles from "./Dish.module.css";
 
 interface DishProps {
-  name: string;
+  dishName: string;
 }
-export const Dish: FC<DishProps> = ({ name }) => {
+
+export const Dish: FC<DishProps> = ({ dishName }) => {
   const { count, onDecrement, onIncrement } = useCount();
+  const {
+    user: { isAuthenticated },
+  } = useContext(UserContext);
+
   return (
     <>
       <li className={styles.wrapper}>
-        <span className={styles.name}>{name}</span>
-        <div className={styles.quantity}>
-          <Counter
-            count={count}
-            onDecrement={onDecrement}
-            onIncrement={onIncrement}
-          />
-        </div>
+        <span className={styles.name}>{dishName}</span>
+        {isAuthenticated && (
+          <div className={styles.quantity}>
+            <Counter
+              count={count}
+              onDecrement={onDecrement}
+              onIncrement={onIncrement}
+            />
+          </div>
+        )}
       </li>
     </>
   );
 };
-
-

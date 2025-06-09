@@ -23,7 +23,7 @@ export const ReviewForm = () => {
       <div className={styles.form_group}>
         <span className={styles.label}>Имя</span>
         <input
-          type='text'
+          type="text"
           value={form.name}
           onChange={(event) => setName(event.target.value)}
           className={styles.input}
@@ -32,7 +32,7 @@ export const ReviewForm = () => {
       <div className={styles.form_group}>
         <span className={styles.label}>Текст</span>
         <input
-          type='text'
+          type="text"
           value={form.text}
           onChange={(event) => setText(event.target.value)}
           className={styles.input}

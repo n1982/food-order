@@ -36,5 +36,5 @@ export default tseslint.config(
       ],
       "react/prop-types": 0,
     },
-  }
+  },
 );

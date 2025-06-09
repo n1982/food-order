@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { Button } from "../../Button";
 import styles from "./Counter.module.css";
 
 interface ICounterProps {
@@ -14,13 +15,9 @@ export const Counter: FC<ICounterProps> = ({
 }) => {
   return (
     <div className={styles.counter}>
-      <button className={styles.button} onClick={onDecrement}>
-        -
-      </button>
+      <Button className={styles.button} onClick={onDecrement} title={"-"} />
       <span className={styles.value}>{count}</span>
-      <button className={styles.button} onClick={onIncrement}>
-        +
-      </button>
+      <Button className={styles.button} onClick={onIncrement} title={"+"} />
     </div>
   );
 };
