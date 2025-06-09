@@ -2,8 +2,8 @@ import {Layout} from "../../Layout";
 import {Restaurants} from "../../Restaurants";
 
 import "./App.css";
-import {ThemeContextProvider} from "../model/ThemeContext.tsx";
-import {UserContextProvider} from "../model/UserContext.tsx";
+import {ThemeContextProvider} from "../model/ThemeContextProvider.tsx";
+import {UserContextProvider} from "../model/UserContextProvider.tsx";
 
 
 const App = () => {

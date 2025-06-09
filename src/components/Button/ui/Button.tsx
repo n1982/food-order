@@ -1,8 +1,9 @@
 import {type FC, useContext} from 'react';
-import {ThemeContext} from "../../App/model/ThemeContext.tsx";
+
 import classNames from 'classnames'
 
 import styles from './Button.module.css'
+import {ThemeContext} from "../../App/model/ThemeContext.ts";
 
 interface IButtonProps {
     title: string;
@@ -11,7 +12,7 @@ interface IButtonProps {
     disabled?: boolean;
 }
 
-export const Button: FC<IButtonProps> = ({title, disabled,  className, onClick}) => {
+export const Button: FC<IButtonProps> = ({title, disabled, className, onClick}) => {
     const {theme} = useContext(ThemeContext)
 
     return (
