@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
-import { LoginButton } from "../../LoginButton/ui/LoginButton.tsx";
-import styles from "./Header.module.css";
+import { LoginButton } from "../../LoginButton/";
 import { ThemeButton } from "../../ThemeButton";
+import styles from "./Header.module.css";
 
 export const Header = forwardRef<HTMLDivElement>((_, ref) => {
   return (
