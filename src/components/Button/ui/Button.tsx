@@ -1,5 +1,5 @@
 import {type FC, useContext} from 'react';
-import {ThemeContext} from "../../App/model/ThemeContext.ts";
+import {ThemeContext} from "../../App/model/ThemeContext.tsx";
 import classNames from 'classnames'
 
 import styles from './Button.module.css'

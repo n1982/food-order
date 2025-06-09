@@ -1,27 +1,21 @@
-import {useState} from "react";
 import {Layout} from "../../Layout";
 import {Restaurants} from "../../Restaurants";
 
 import "./App.css";
-import {ThemeContext} from "../model/ThemeContext.ts";
-import {UserContext} from "../model/UserContext.ts";
+import {ThemeContextProvider} from "../model/ThemeContext.tsx";
+import {UserContextProvider} from "../model/UserContext.tsx";
 
 
 const App = () => {
-    const [theme, setTheme] = useState<string>('light')
-    const [user, setUser] = useState<string | null>(null)
 
-    const toggleTheme = () => {
-        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-    };
     return (
-        <ThemeContext value={{theme, toggleTheme}}>
-            <UserContext value={{user, setUser}}>
+        <ThemeContextProvider>
+            <UserContextProvider>
                 <Layout>
                     <Restaurants/>
                 </Layout>
-            </UserContext>
-        </ThemeContext>
+            </UserContextProvider>
+        </ThemeContextProvider>
     )
 };
 
