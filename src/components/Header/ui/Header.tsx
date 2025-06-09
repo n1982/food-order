@@ -1,9 +1,12 @@
-import { forwardRef } from "react";
 import { LoginButton } from "../../LoginButton/";
 import { ThemeButton } from "../../ThemeButton";
 import styles from "./Header.module.css";
 
-export const Header = forwardRef<HTMLDivElement>((_, ref) => {
+type HeaderProps = {
+  ref?: React.Ref<HTMLDivElement>;
+};
+
+export const Header = ({ ref }: HeaderProps) => {
   return (
     <header ref={ref} className={styles.header}>
       <span>Header</span>
@@ -13,6 +16,4 @@ export const Header = forwardRef<HTMLDivElement>((_, ref) => {
       </div>
     </header>
   );
-});
-
-Header.displayName = "Header";
+};
