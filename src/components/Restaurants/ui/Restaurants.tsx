@@ -6,7 +6,7 @@ import { Restaurant } from "../../Restaurant";
 
 export const Restaurants = () => {
   const [currentRestaurant, setCurrentRestaurant] = useState<IRestaurant>(
-    restaurants[0]
+    restaurants[0],
   );
   return (
     <>

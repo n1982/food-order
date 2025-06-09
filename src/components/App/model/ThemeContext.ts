@@ -1,12 +1,11 @@
-import {createContext} from "react";
+import { createContext } from "react";
 
 export interface ThemeContextType {
-    theme: string;
-    toggleTheme: () => void;
+  theme: string;
+  toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-    theme: 'light',
-    toggleTheme: () => {
-    }
+  theme: "light",
+  toggleTheme: () => {},
 });
