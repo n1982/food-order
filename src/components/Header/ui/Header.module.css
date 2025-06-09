@@ -1,26 +1,18 @@
 .header {
-  flex-shrink: 0;
-  background: var(--color-primary);
-  color: white;
-  padding: 16px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    color: white;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .button_wrapper {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
-.button {
-  padding: 8px 16px;
-  background-color: var(--color-secondary); /* Зеленый цвет */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
+

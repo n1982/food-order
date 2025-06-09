@@ -1,36 +1,15 @@
-import { forwardRef, useContext } from "react";
+import { forwardRef } from "react";
+import { LoginButton } from "../../LoginButton/ui/LoginButton.tsx";
 import styles from "./Header.module.css";
-import { Button } from "../../Button";
-import { UserContext } from "../../App/model/UserContext.ts";
-import { ThemeContext } from "../../App/model/ThemeContext.ts";
+import { ThemeButton } from "../../ThemeButton";
 
 export const Header = forwardRef<HTMLDivElement>((_, ref) => {
-  const { toggleTheme } = useContext(ThemeContext);
-  const { user, toggleUser } = useContext(UserContext);
-
   return (
     <header ref={ref} className={styles.header}>
       <span>Header</span>
       <div className={styles.button_wrapper}>
-        <Button
-          className={styles.button}
-          title={"Theme"}
-          onClick={toggleTheme}
-        />
-        {!user.isAuthenticated && (
-          <Button
-            className={styles.button}
-            title={"Вход"}
-            onClick={() => toggleUser()}
-          />
-        )}
-        {user.userName && (
-          <Button
-            className={styles.button}
-            title={"Выход"}
-            onClick={() => toggleUser()}
-          />
-        )}
+        <LoginButton />
+        <ThemeButton />
       </div>
     </header>
   );
