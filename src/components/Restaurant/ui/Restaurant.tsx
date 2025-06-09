@@ -1,10 +1,11 @@
-import type { FC } from "react";
+import {type FC, useContext} from "react";
 import type { IRestaurant } from "../../../types/app.types";
 import { Menu } from "../../Menu";
 import { ReviewForm } from "../../ReviewForm";
 import { ReviewList } from "../../ReviewList";
+import {UserContext} from "../../App/model/UserContext.tsx";
 import styles from "./Restaurant.module.css";
-import {useAuth} from "../../App/model/useAuth.ts";
+
 
 interface IRestaurantProps {
   restaurant: IRestaurant;
@@ -12,7 +13,7 @@ interface IRestaurantProps {
 export const Restaurant: FC<IRestaurantProps> = ({
   restaurant: { name, menu, reviews },
 }) => {
-    const {isUserLogin} = useAuth()
+    const {user: {isAuthenticated} } = useContext(UserContext)
   if (!name) {
     return null;
   }
@@ -26,7 +27,7 @@ export const Restaurant: FC<IRestaurantProps> = ({
         {!!reviews && <ReviewList reviews={reviews} />}
       </div>
       <div>
-          {isUserLogin && <ReviewForm/>}
+          {isAuthenticated && <ReviewForm/>}
       </div>
     </div>
   );

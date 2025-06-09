@@ -13,7 +13,7 @@ export interface UserContextType {
 interface UserContextProviderProps {
     children: ReactNode;
 }
-const UserContext = createContext<UserContextType >({
+export const UserContext = createContext<UserContextType >({
     user: {isAuthenticated: false},
     toggleUser: ()=>{}
 });

@@ -14,7 +14,6 @@ interface IButtonProps {
 export const Button: FC<IButtonProps> = ({title, disabled,  className, onClick}) => {
     const {theme} = useContext(ThemeContext)
 
-
     return (
         <div>
             <button className={classNames(className, {
