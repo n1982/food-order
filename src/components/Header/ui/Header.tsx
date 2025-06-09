@@ -1,9 +1,10 @@
+import type { Ref } from "react";
 import { LoginButton } from "../../LoginButton/";
 import { ThemeButton } from "../../ThemeButton";
 import styles from "./Header.module.css";
 
 type HeaderProps = {
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
 };
 
 export const Header = ({ ref }: HeaderProps) => {
